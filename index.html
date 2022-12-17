@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Arithemetic operation </title>
+	<script src="jquery.js"></script>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<h1>Arithemetics in Javascript</h1>
+	<div id="tbl">
+		<div class="screen">
+			<label for="input">Result:</label>
+			<input type="text" class="inpt" id="result" readonly="true">
+		</div>
+		<section>
+			<div>
+				<label>First number:</label>
+				<input type="text" id="num1" class="inpt" onkeyup="getresult()"> 
+			<div>
+			<div>
+				<label>Second number:</label>
+				<input type="text" id="num2" class="inpt" onkeyup="getresult()">
+			</div>
+			<div>
+				<label for="select">Operator:</label>
+				<select id="operator" class="inpt">
+					<option value="+">+</option> 
+					<option value="-">-</option>
+					<option value="*">*</option>
+					<option value="/">/</option>
+				</select>
+			</div>
+		</section>
+		<p>Powered by Code RIO</p>
+	</div>
+</body>
+	<script>
+		$(document).ready(function(){
+			//This section calls the Dosomething Function
+			//------------------------------------------
+            $("#operator").change(function(){
+			    getresult();
+			});	
+		});
+		
+		function getresult(){
+			let num1        = $("#num1").val().trim();
+			let num2        = $("#num2").val().trim();
+			let operator    = $("#operator").val().trim();
+			if(num1!='' && num2!=''){
+			   	if(operator=='+')
+			        result = parseInt(num1) + parseInt(num2);
+			  	else if(operator=='-')
+			        result = parseInt(num1) - parseInt(num2);
+			   	else if(operator=='*')
+			        result = parseInt(num1) * parseInt(num2);
+			   	else
+			        result = parseInt(num1) / parseInt(num2);
+					result = result.toFixed(2)
+					$("#result").val(result);
+			}else{
+			     $("#result").val('')
+			}
+		}	
+	</script>
+</html>

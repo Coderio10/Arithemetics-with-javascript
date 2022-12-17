@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+:root{
+    --Strongcyan: hsl(172, 67%, 45%);
+    --Verydarkcyan: hsl(183, 100%, 15%);
+    --Darkgrayishcyan: hsl(186, 14%, 43%);
+    --Grayishcyan: hsl(184, 14%, 56%);
+    --Lightgrayishcyan: hsl(185, 41%, 84%);
+    --Verylightgrayishcyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Lightgrayishcyan);
+}
+h1{
+    color: var(--Verydarkcyan);
+    margin: 100px 0 30px 0;
+}
+section{
+    background-color: var(--White);
+    color: var(--Verydarkcyan);
+    box-shadow: 1px 1px 5px 1px #000;
+    border-radius: 5px;
+    width: 400px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section div{
+    padding: 20px 0;
+}
+section div label{
+    float: left;
+    padding-right: 30px;
+    font-weight: 700;
+}
+section div input, select{
+    float: right;
+}
+input{
+    background-color: var(--Lightgrayishcyan);
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 150px;
+    text-align: right;
+    padding: 0 10px;
+    color: var(--Verydarkcyan);
+    font-size: 18px;
+    font-weight: 700;
+}
+select{
+    width: 150px;
+    height: 30px;
+    color: var(--White);
+    background-color: var(--Verydarkcyan);
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 16px;
+}
+P{
+    margin-top: 20px;
+    text-align: center;
+    color: var(--Verydarkcyan);
+}
+/* screen */
+.screen{
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px #000;
+}
+.screen label{
+    display: none;
+}
+.screen input{
+    border: 2px solid var(--Verydarkcyan);
+    height: 60px;
+    width: 100%;
+    background-color: var(--Grayishcyan);
+    text-align: right;
+    color: var(--White);
+    font-weight: 700;
+    font-size: 24px;
+    padding: 0 20px;
+}
+@media (max-width:430px) {
+    h1{
+        text-align: center;
+        font-size: 32px;
+    }
+    section{
+        width: 90%;  
+        margin: 10px auto;
+    }
+    .screen{
+        width: 90%;
+        margin: 10px auto
+    }
+    .screen input{
+        width: 100%;
+    }
+    input{
+        height: 30px;
+        width: 50%;       
+    }
+    select{
+        width: 50%;
+        height: 30px;
+    }
+}
+@media (max-width:380px) {
+    section{
+    
+    }
+    section div{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        padding: 20px 0;
+    } 
+    input{
+        height: 30px;
+        width: 80%;       
+    }
+    select{
+        width: 225px;
+        height: 30px;
+    }
+}
